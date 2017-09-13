@@ -45,19 +45,16 @@ public class Capital {
 
     public static String getRandomName(String lineToFormat, String typeToCreate) {
         String[] dividedLine = lineToFormat.split("\\|");
+        String name;
         if (typeToCreate.equals("capital")) {
-            String capitalName = dividedLine[1].trim();
-            return capitalName;
+            name = dividedLine[1].trim();
+            return name;
         }
         else if (typeToCreate.equals("country")) {
-            String countryName = dividedLine[0].trim();
-            return countryName;
+            name = dividedLine[0].trim();
+            return name;
         }
-        else {
-            System.out.println("E1 Wrong choice of name to create.");
-            System.exit(0);
-            return null;
-        }
+        return "";
     }
 
     public String getCapitalName() {
